@@ -44,12 +44,12 @@ with open('words.txt') as file:
 for word in range(words):
     wordIndex = randint(0, len(wordList) - 1)
     wordSelect = wordList[wordIndex]
-    if caps < words:
+    if 0 < caps < words - word:
         rand2 = randint(0, 1)
         if rand2 == 1:
             wordSelect = wordSelect[0].upper() + wordSelect[1:]
             caps -= 1
-    else:
+    elif caps >= words - word:
         wordSelect = wordSelect[0].upper() + wordSelect[1:]
         caps -= 1
     password += wordSelect

@@ -11650,6 +11650,7 @@ crores
 crosier
 crosiers
 cross
+cross-bun
 crossbar
 crossbars
 crossbones
