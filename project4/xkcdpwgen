@@ -29,10 +29,8 @@ for opt, arg in opts:
         sys.exit()
     elif opt == "-w" or opt == "--words":
         words = int(arg)
-        print(words)
     elif opt == "-c" or opt == "--caps":
         caps = int(arg)
-        print(words)
     elif opt == "-n" or opt == "--numbers":
         numbers = int(arg)
     elif opt == "-s" or opt == "--symbols":
