@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python
 
 import getopt
 import sys
@@ -29,12 +29,14 @@ for opt, arg in opts:
         sys.exit()
     elif opt == "-w" or opt == "--words":
         words = int(arg)
+        print(words)
     elif opt == "-c" or opt == "--caps":
-        words = int(arg)
+        caps = int(arg)
+        print(words)
     elif opt == "-n" or opt == "--numbers":
-        words = int(arg)
+        numbers = int(arg)
     elif opt == "-s" or opt == "--symbols":
-        words = int(arg)
+        symbols = int(arg)
 
 with open('words.txt') as file:
     wordList = file.read().splitlines()
@@ -58,6 +60,6 @@ for num in range(numbers):
 
 for sym in range(symbols):
     symIndex = randint(0, len(password) - 1)
-    password = password[0:symIndex] + numberList[randint(0, 11)] + password[symIndex:]
+    password = password[0:symIndex] + symbolList[randint(0, 11)] + password[symIndex:]
 
 print(password)
