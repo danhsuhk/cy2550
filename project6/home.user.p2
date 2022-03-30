@@ -8,7 +8,7 @@
   #include <abstractions/nameservice>
   #include <abstractions/user-tmp>
 
-deny /etc/adduser.conf r,
+  deny /etc/adduser.conf r,
   deny /etc/anacrontab r,
   deny /etc/apg.conf r,
   deny /etc/appstream.conf r,
