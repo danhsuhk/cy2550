@@ -1,17 +1,21 @@
-# Last Modified: Wed Mar 30 23:32:38 2022
+# Last Modified: Wed Mar 30 23:58:43 2022
 #include <tunables/global>
 
 /home/dan/p2 flags=(audit) {
-  #include <abstractions/base>
-  #include <abstractions/nameservice>
   #include <abstractions/user-tmp>
 
   /etc/hostid r,
   /etc/timezone r,
+  /etc/passwd r,
+  /etc/hosts r,
   /home/dan/p2 mr,
   /proc/uptime r,
   /var/log/syslog r,
   owner /home/*/.project2/config w,
   owner /home/*/template r,
+  network tcp,
+  /{usr/,}lib{,32,64}/**.so* mr,
+  /proc/filesystems r,
+  /proc/cpuinfo r,
 
 }
